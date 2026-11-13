@@ -1,0 +1,134 @@
+{
+ "id": "1-4",
+ "world": 1,
+ "stage": 4,
+ "name": "Thornback's Grove",
+ "theme": "meadow",
+ "time_limit": 400,
+ "player_spawn": {
+  "x": 64,
+  "y": 352
+ },
+ "tiles": [],
+ "platforms": [
+  {
+   "x": 0,
+   "y": 416,
+   "w": 1600,
+   "h": 64,
+   "type": "ground"
+  },
+  {
+   "x": 300,
+   "y": 300,
+   "w": 128,
+   "h": 16,
+   "type": "stone"
+  },
+  {
+   "x": 700,
+   "y": 256,
+   "w": 128,
+   "h": 16,
+   "type": "stone"
+  },
+  {
+   "x": 1100,
+   "y": 300,
+   "w": 128,
+   "h": 16,
+   "type": "stone"
+  }
+ ],
+ "enemies": [
+  {
+   "x": 500,
+   "y": 384,
+   "type": "walker"
+  },
+  {
+   "x": 900,
+   "y": 384,
+   "type": "hopper"
+  }
+ ],
+ "collectibles": [
+  {
+   "x": 300,
+   "y": 252,
+   "type": "gem"
+  },
+  {
+   "x": 336,
+   "y": 252,
+   "type": "gem"
+  },
+  {
+   "x": 372,
+   "y": 252,
+   "type": "gem"
+  },
+  {
+   "x": 700,
+   "y": 208,
+   "type": "gem"
+  },
+  {
+   "x": 736,
+   "y": 208,
+   "type": "gem"
+  },
+  {
+   "x": 772,
+   "y": 208,
+   "type": "gem"
+  },
+  {
+   "x": 1100,
+   "y": 252,
+   "type": "gem"
+  },
+  {
+   "x": 1136,
+   "y": 252,
+   "type": "gem"
+  },
+  {
+   "x": 1172,
+   "y": 252,
+   "type": "gem"
+  }
+ ],
+ "powerups": [
+  {
+   "x": 720,
+   "y": 208,
+   "type": "flame"
+  }
+ ],
+ "checkpoints": [
+  {
+   "x": 800,
+   "y": 352
+  }
+ ],
+ "hazards": [],
+ "secret_areas": [],
+ "goal": {
+  "x": 1500,
+  "y": 352
+ },
+ "boss": {
+  "name": "Thornback, Guardian of the Meadows",
+  "x": 1250,
+  "y": 320,
+  "hp": 6,
+  "color": "#3a7d2c",
+  "patterns": [
+   "charge",
+   "spikes",
+   "summon"
+  ]
+ },
+ "width": 1600
+}
