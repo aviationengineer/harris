@@ -76,6 +76,12 @@ check('Game Over works',G.state==='gameover','state='+G.state);
 G.state='menu'; let drawOk=true; try{PQ.draw();}catch(err){drawOk=false;console.log(err);}
 check('Rendering + main menu draw without errors',drawOk);
 check('Score/HUD state fields present',typeof G.score==='number'&&typeof G.gems==='number'&&typeof G.lives==='number');
+// --- touch controls (phone fix) ---
+check('Touch overlay buttons present (START/RUN/pause)', /id="ts"/.test(html) && /id="trun"/.test(html) && /id="tp"/.test(html));
+G.state='menu'; G.menuIdx=0; PQ.confirm();
+check('Touch START (confirm) starts a game from the menu', G.state!=='menu' && !!G.level, 'state='+G.state);
+G.state='playing'; PQ.togglePause(); const pausedOk=G.state==='paused'; PQ.togglePause();
+check('Touch pause toggles pause', pausedOk && G.state==='playing', 'state='+G.state);
 const failed=results.filter(r=>!r.ok);
 console.log('\n=== ACCEPTANCE: '+(results.length-failed.length)+'/'+results.length+' passed ===');
 process.exit(failed.length?1:0);
